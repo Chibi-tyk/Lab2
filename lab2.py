@@ -15,22 +15,34 @@ def get_user_input():
     return new_list
 
 
-def calc_average(list_input):
+def calc_average(new_list):
     print("calc_Average")
+    avg = sum(new_list) / len(new_list)
+    print(f"Average value: {avg}")
+    return avg
 
-def find_min_max(list_input):
+def min_max_temp(new_list):
     print("find_min_max")
+    new_list.sort()
+    print(f"after sorting {new_list}")
+    return [new_list[0], new_list[-1]]
 
-def sort_temperature(list_input):
+def sort_temperature(new_list):
     print("sorting_temperature")
+    new_list.sort()
+    print(f"after sorting {new_list}")
 
-def calc_median_temperature(list_input):
+
+def calc_median_temperature(new_list):
     print("calc_median_temperature")
 
 def main():
     print("Lab2- Exercise 3")
     display_main_menu()
     num_list = get_user_input()
+    avg = calc_average(num_list)
+    min_max_values= min_max_temp(num_list)
+    print(f"Minimum and maximum values: {min_max_values}")
     
 if __name__ == "__main__":
     main()
