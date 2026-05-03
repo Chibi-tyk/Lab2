@@ -11,6 +11,7 @@ def get_user_input():
     new_list = []
     for i in num_list:
         new_list.append(float(i))
+    print (f"This is your new list: {new_list}")
     return new_list
 
 
@@ -25,3 +26,11 @@ def sort_temperature(list_input):
 
 def calc_median_temperature(list_input):
     print("calc_median_temperature")
+
+def main():
+    print("Lab2- Exercise 3")
+    display_main_menu()
+    num_list = get_user_input()
+    
+if __name__ == "__main__":
+    main()
