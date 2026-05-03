@@ -33,8 +33,18 @@ def sort_temperature(new_list):
     print(f"after sorting {new_list}")
 
 
-def calc_median_temperature(new_list):
+def median_temperature(new_list):
     print("calc_median_temperature")
+    total = len(new_list)
+
+    if total % 2 == 0 :
+        num1 = new_list[total // 2 - 1]
+        num2 = new_list[total //2]
+        median_temp = (num1+num2) /2
+    else:
+        median_temp = new_list[total //2]
+    print(f"Your median temperature is {median_temp}")
+    return median_temp
 
 def main():
     print("Lab2- Exercise 3")
@@ -43,6 +53,7 @@ def main():
     avg = calc_average(num_list)
     min_max_values= min_max_temp(num_list)
     print(f"Minimum and maximum values: {min_max_values}")
-    
+    median_temp = median_temperature(num_list)
+
 if __name__ == "__main__":
     main()
