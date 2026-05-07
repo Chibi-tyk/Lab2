@@ -1,7 +1,7 @@
 import lab2
 
 def test_find_min_max():
-    expected_result = (1,6)
+    expected_result = [1,6]
     test_list = [1, 6, 4, 3, 5, 2]
     result = lab2.min_max_temp(test_list)
     assert (result == expected_result)
